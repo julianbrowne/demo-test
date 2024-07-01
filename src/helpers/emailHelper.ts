@@ -4,12 +4,9 @@
  * 
 **/
 
-const emailRegEx =
-  /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+import * as EmailValidator from 'email-validator';
 
-export const validateEmail = ( 
-  email: string
-) => { 
+export const validateEmail = (email: string) => { 
 
   if (!email) { 
     return false;
@@ -41,10 +38,6 @@ export const validateEmail = (
     return false;
   }
 
-  if (!emailRegEx.test(email)) {
-    return false;
-  }
-
-  return true;
+  return EmailValidator.validate(email);
 
 };
