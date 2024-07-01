@@ -9,14 +9,13 @@ const { width: ScreenWidth } = Dimensions.get("screen");
 export default StyleSheet.create({ 
 
   container: { 
-    backgroundColor: '#F9F9F9',
+    backgroundColor: '#F8F8F8',
     flex: 1,
-    justifyContent: 'center',
-    padding: 16
+    justifyContent: 'center'
   },
 
   loginForm: { 
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   title: { 
@@ -29,13 +28,17 @@ export default StyleSheet.create({
   input: { 
     color: '#000000',
     backgroundColor: '#FFFFFF',
-    borderColor: '#F9F9F9',
-    height: 40,
-    width: ScreenWidth * 0.6,
+    borderColor: '#D9D9D9',
+    borderRadius: '4px',
     borderWidth: 1,
-    marginBottom: 12,
-    paddingHorizontal: 8
-  },
+    position: 'relative',
+    transition: '0.3s all',
+    width: '60%',
+    height: 40,
+    padding: 10,
+    alignItems: 'stretch',
+    marginBottom: 20
+},
 
   button: { 
     color: '#FFFFFF',

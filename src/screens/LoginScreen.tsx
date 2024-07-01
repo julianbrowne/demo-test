@@ -47,6 +47,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
       <View style={styles.loginForm}>
+
         <Text style={styles.title}>
           Login Sample
         </Text>
