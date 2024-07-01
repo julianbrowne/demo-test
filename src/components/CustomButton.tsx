@@ -2,7 +2,7 @@
 import React from 'react';
 
 import {
-  TouchableOpacity,
+  Pressable,
   Text,
   StyleSheet
 } from 'react-native';
@@ -14,9 +14,9 @@ type Props = {
 
 const CustomButton: React.FC<Props> = ({ title, onPress }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <Pressable style={styles.button} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

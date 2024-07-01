@@ -15,6 +15,7 @@ import { RouteProp } from '@react-navigation/native';
 // app imports
 
 import { handleLogin } from '../helpers/authHelper';
+
 import CustomButton from '../components/CustomButton';
 import styles from './styles/LoginScreen.styles';
 
@@ -71,7 +72,10 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
 
         <CustomButton
           title="Login"
-          onPress={handleSubmit} />
+          onPress={() => { 
+            handleSubmit();
+          }}
+        />
 
       </View>
     </SafeAreaView>

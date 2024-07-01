@@ -3,12 +3,22 @@ import { handleLogin } from '../src/helpers/authHelper';
 
 describe('handleLogin', () => { 
 
-  it('should call onError if email or password is empty', async () => {
+
+  it('should call onError if email is empty', async () => {
     const mockOnSuccess = jest.fn();
     const mockOnError = jest.fn();
 
-    await handleLogin('', '', mockOnSuccess, mockOnError);
-    expect(mockOnError).toHaveBeenCalledWith('Please fill in all fields');
+    await handleLogin('', 'password', mockOnSuccess, mockOnError);
+    expect(mockOnError).toHaveBeenCalledWith('Email field is empty');
+    expect(mockOnSuccess).not.toHaveBeenCalled();
+  });
+
+  it('should call onError if password is empty', async () => {
+    const mockOnSuccess = jest.fn();
+    const mockOnError = jest.fn();
+
+    await handleLogin('name@example.com', '', mockOnSuccess, mockOnError);
+    expect(mockOnError).toHaveBeenCalledWith('Password field is empty');
     expect(mockOnSuccess).not.toHaveBeenCalled();
   });
 
@@ -26,7 +36,7 @@ describe('handleLogin', () => {
     const mockOnError = jest.fn();
 
     await handleLogin('invalid@example.com', 'wrongpassword', mockOnSuccess, mockOnError);
-    expect(mockOnError).toHaveBeenCalledWith('Invalid email or password.');
+    expect(mockOnError).toHaveBeenCalledWith('Incorrect email or password');
     expect(mockOnSuccess).not.toHaveBeenCalled();
   });
 

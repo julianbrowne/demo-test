@@ -31,7 +31,7 @@ export default StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderColor: '#F9F9F9',
     height: 40,
-    width: ScreenWidth * 0.3,
+    width: ScreenWidth * 0.6,
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8
