@@ -26,7 +26,9 @@ export const validateEmail = (
 
   if (account.length > 64) {
     return false;
-  } else if (address.length > 255) {
+  }
+
+  if (address.length > 255) {
     return false;
   }
 
