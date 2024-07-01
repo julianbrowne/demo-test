@@ -29,7 +29,7 @@ type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
 
 type Props = {
   navigation: LoginScreenNavigationProp;
-  route: LoginScreenRouteProp;
+  //route: LoginScreenRouteProp;
 };
 
 const LoginScreen: React.FC<Props> = ({ navigation }) => { 
