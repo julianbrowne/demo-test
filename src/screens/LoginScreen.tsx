@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RouteProp } from '@react-navigation/native';
 
 // app imports
 
@@ -25,11 +24,9 @@ type RootStackParamList = {
 };
 
 type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
-type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
 
 type Props = {
   navigation: LoginScreenNavigationProp;
-  //route: LoginScreenRouteProp;
 };
 
 const LoginScreen: React.FC<Props> = ({ navigation }) => { 
