@@ -20,7 +20,7 @@ Browser will open on `http://localhost:8081/`
 
 Run through eslint (`npm run lint`)
 Jest tests (`npm run test`)
-SonarCloud static analysis
+SonarCloud static analysis (in `docs`)
 Screen Shots in `docs` folder
 
 ## Credentials
