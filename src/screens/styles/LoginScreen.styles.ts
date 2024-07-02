@@ -24,7 +24,7 @@ export default StyleSheet.create({
     color: '#000000',
     backgroundColor: '#FFFFFF',
     borderColor: '#D9D9D9',
-    borderRadius: '4px',
+    borderRadius: 4,
     borderWidth: 1,
     position: 'relative',
     transition: '0.3s all',
