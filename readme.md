@@ -3,7 +3,7 @@
 
 Built using React Native & Expo
 
-Run using `npx expo start --web`
+Run using `npx expo start --web` etc
 
 Browser will open on `http://localhost:8081/`
 
@@ -18,9 +18,10 @@ Browser will open on `http://localhost:8081/`
 
 ## QA
 
-Run through eslint
-Jest tests
+Run through eslint (`npm run lint`)
+Jest tests (`npm run test`)
 SonarCloud static analysis
+Screen Shots in `docs` folder
 
 ## Credentials
 
