@@ -1,5 +1,6 @@
 
 import { handleLogin } from '../src/helpers/authHelper';
+import { fakeEmail, fakePassword } from '../src/fakeCreds.json';
 
 describe('handleLogin', () => { 
 
@@ -23,8 +24,8 @@ describe('handleLogin', () => {
     expect(mockOnSuccess).not.toHaveBeenCalled();
   });
 
-  it('should call onSuccess on valid credentials', async () => {
-    await handleLogin('rakbank@rakbank.com', 'r4kb4nk', mockOnSuccess, mockOnError);
+  it('should call onSuccess on valid credentials', async () => { 
+    await handleLogin(fakeEmail, fakePassword, mockOnSuccess, mockOnError);
     expect(mockOnSuccess).toHaveBeenCalled();
     expect(mockOnError).not.toHaveBeenCalled();
   });

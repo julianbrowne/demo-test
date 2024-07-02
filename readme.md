@@ -25,5 +25,7 @@ Screen Shots in `docs` folder
 
 ## Credentials
 
+(can be found in `src/fakeCreds.json`)
+
 username: `rakbank@rakbank.com`
 password: `r4kb4nk`

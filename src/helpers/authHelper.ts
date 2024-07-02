@@ -6,6 +6,7 @@
 **/
 
 import { validateEmail } from '../helpers/emailHelper';
+import { fakeEmail, fakePassword } from '../fakeCreds.json';
 
 export const handleLogin = async ( 
   email: string,
@@ -29,8 +30,12 @@ export const handleLogin = async (
     return;
   };
 
+  /**
+   * Fake backend call. Would handle 401/500 etc here 
+  **/
+
   try { 
-    if (email === 'rakbank@rakbank.com' && password === 'r4kb4nk') {
+    if (email === fakeEmail && password === fakePassword) { 
       onSuccess();
     }
     else { 
@@ -40,4 +45,5 @@ export const handleLogin = async (
   catch (err) { 
     onError(err.message);
   }
+
 };
